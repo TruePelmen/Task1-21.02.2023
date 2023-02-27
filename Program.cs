@@ -7,9 +7,30 @@ namespace Vyrobnycha_21._02._2023_
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            //Task1();
-            //Task2();
-            Task3();
+            while (true)
+            {
+                Console.WriteLine("Enter number of the task");
+                int inputed = Convert.ToInt32(Console.ReadLine());
+                if (inputed == 1)
+                {
+                    Task1();
+                }
+                else if (inputed == 2)
+                {
+                    Task2();
+                }
+                else if (inputed == 3)
+                {
+                    Task3();
+                }
+                else
+                {
+                    Console.WriteLine("Wrong Input");
+                }
+            }
+            
+            
+
         }
         static void Task1()
         {
