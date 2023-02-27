@@ -113,19 +113,18 @@ namespace Vyrobnycha_21._02._2023_
             }
 
             //max value search + _vector output
-            int max = 0;
+            int min = vector[0];
             Console.Write("Vector: ");
             for (int i = 0; i < 5; i++)
             {
                 Console.Write(vector[i].ToString());
                 Console.Write(" ");
-                if (max < vector[i])
+                if (min > vector[i])
                 {
-                    max = vector[i];
-                }
-                
+                    min = vector[i];
+                }             
             }
-            Console.WriteLine($"Max value is: {max}");
+            Console.WriteLine($"\nmin value is: {min}");
         }
     }
 }
