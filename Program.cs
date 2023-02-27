@@ -70,7 +70,62 @@ namespace Vyrobnycha_21._02._2023_
         }
         static void Task3()
         {
+            int[,] arr = new int[5, 7]
+            {
+                {12, 43, 12, 43, 65, 56, 76},
+                {21, 534, 56, 756, 23, 65, 12 },
+                { 65, 34, 67, 47, 324, 5676, 12},
+                { 61, 26, 85, 25, 58, 35, 57 },
+                { 17, 34, 85, 87, 334, 67, 78}
+            };
+            //Entering an array from the keyboard
+            /*
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    Console.WriteLine($"Enter element: [{i+1}, {j+1}]");
+                    arr[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }*/
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    Console.Write($"[{arr[i, j]}] ");            
+                }
+                Console.WriteLine("\n");
+            }
+            int[] vector = new int [5];
+            //Array _vector filling
+            for (int i = 0; i < 5; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < 7; j++)
+                {
+                    if(arr[i, j]%2==0)
+                    {
+                        count++;
+                    }
+                }
+                vector[i] = count;
+                count = 0;
+            }
 
+            //max value search + _vector output
+            int max = 0;
+            Console.Write("Vector: ");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(vector[i].ToString());
+                Console.Write(" ");
+                if (max < vector[i])
+                {
+                    max = vector[i];
+                }
+                
+            }
+            Console.WriteLine($"Max value is: {max}");
         }
     }
 }
