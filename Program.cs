@@ -25,7 +25,7 @@ namespace Vyrobnycha_21._02._2023_
                 }
                 else
                 {
-                    Console.WriteLine("Wrong Input");
+                    Console.WriteLine("Wrong Input!");
                 }
             }
             
@@ -37,7 +37,7 @@ namespace Vyrobnycha_21._02._2023_
             Console.WriteLine("Enter your number: ");
             string number = Console.ReadLine();
             Console.WriteLine(number);
-            if (number==null)
+            if (number=="")
             {
                 Console.WriteLine("You haven`t written a number!");
             }
